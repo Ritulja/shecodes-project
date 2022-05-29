@@ -1,0 +1,79 @@
+#enter-city-form {
+  padding: 4px 100px 7px 12px;
+  border-radius: 4px;
+  border: 1px white solid;
+  margin-bottom: 0;
+}
+
+#city {
+  color: white;
+
+  font-size: 50px;
+}
+.row {
+  padding-right: 2px;
+}
+.card {
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.card-body {
+  background: #8ec9f9;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.main {
+  padding: 20px 0 20px 0;
+}
+.main-cloud {
+  font-size: 200px;
+  color: white;
+}
+#current-button {
+  background-color: blue;
+}
+#date {
+  color: white;
+  font-size: 18px;
+}
+#current-state {
+  color: white;
+  font-size: 18px;
+}
+.current-temp {
+  font-size: 110px;
+  text-align: right;
+  color: white;
+  margin-bottom: 0;
+}
+.cf {
+  font-size: 13px;
+  position: relative;
+  top: -70px;
+  right: 30px;
+}
+#far {
+  font-size: 13px;
+  position: relative;
+  top: -70px;
+  right: 30px;
+}
+.characteristics {
+  text-align: right;
+  color: white;
+  position: relative;
+  bottom: 0px;
+  margin-bottom: 0;
+  font-size: 18;
+}
+.days {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.emojis {
+  font-size: 40px;
+}

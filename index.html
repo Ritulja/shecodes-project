@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/b9a66a8d77.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form id="city-search-form">
+            <input
+              type="text"
+              placeholder="Enter a city"
+              autocomplete="off"
+              autofocus="on"
+              id="enter-city-form"
+            />
+            <button type="button" class="btn btn-success">Search</button>
+            <button type="button" class="btn btn-success" id="current-button">Current</button>
+          </form>
+          <div class="row main">
+            <div class="col">
+              <h1 id="city"></h1>
+              <span id="date"></span>
+                 <br />
+              <div id="current-state"></div>
+              </p>
+              <br />
+
+              <h2 class="current-temp">
+                <span id="current-degree"></span>
+                <span>
+                  <a href="#" class="cf">ºC |</a><a href="#" id="far">ºF</a>
+                </span>
+              </h2>
+            </div>
+            <div class="col">
+              <i class="fa-solid fa-cloud main-cloud"></i>
+              <br />
+              <br />
+              <br />
+
+              <p class="characteristics">
+              Humidity:<span id="humidity"></span>%<br>
+               Wind:<span id="wind"></span>km/h
+              </p>
+            </div>
+          </div>
+          <div class="row days">
+            <div class="col monday">
+              <div>Mon</div>
+              <div class="emojis">🌧️</div>
+              <div>14º</div>
+            </div>
+            <div class="col tuesday">
+              <div>Tue</div>
+              <div class="emojis">☁️</div>
+              <div>16º</div>
+            </div>
+            <div class="col wednesday">
+              <div>Wed</div>
+              <div class="emojis">🌥️</div>
+              <div>18º</div>
+            </div>
+            <div class="col thursday">
+              <div>Thu</div>
+              <div class="emojis">☀️</div>
+              <div>24º</div>
+            </div>
+            <div class="col Friday">
+              <div>Fri</div>
+              <div class="emojis">☀️</div>
+              <div>21º</div>
+            </div>
+            <div class="col saturday">
+              <div>Sat</div>
+              <div class="emojis">🌥️</div>
+              <div>19º</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
