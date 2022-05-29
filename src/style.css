@@ -14,7 +14,8 @@
   padding-right: 2px;
 }
 .card {
-  width: 600px;
+  box-sizing: border-box;
+  max-width: 600px;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
@@ -76,4 +77,12 @@
 
 .emojis {
   font-size: 40px;
+}
+.codedBy {
+  position: relative;
+  left: 350px;
+  font-family: monospace;
+
+  font-size: 14px;
+  padding-top: 5px;
 }
