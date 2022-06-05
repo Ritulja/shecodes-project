@@ -44,6 +44,9 @@
   color: white;
   font-size: 18px;
 }
+#icon {
+  size: 300 px;
+}
 .current-temp {
   font-size: 110px;
   text-align: right;
