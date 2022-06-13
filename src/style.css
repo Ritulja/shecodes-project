@@ -53,7 +53,7 @@
   color: white;
   margin-bottom: 0;
 }
-.cf {
+.active {
   font-size: 13px;
   position: relative;
   top: -70px;
@@ -89,4 +89,13 @@
 
   font-size: 14px;
   padding-top: 5px;
+}
+.current-temp .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.current-temp .active:hover {
+  text-decoration: none;
 }

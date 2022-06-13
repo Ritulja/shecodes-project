@@ -63,7 +63,10 @@ function searchCity(city) {
 function displayFahrenheitTemp(event) {
   event.preventDefault;
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  celsiusLink.classList.remove(".active");
+  fahrenheitLink.classList.add(".active");
   let tempElement = document.querySelector("#current-degree");
+
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 let celsiusTemp = null;
@@ -73,7 +76,10 @@ citySearchForm.addEventListener("submit", cityDisplay);
 
 function displayCelsiusTemp(event) {
   event.preventDefault;
+  celsiusLink.classList.add(".active");
+  fahrenheitLink.classList.remove(".active");
   let degreeElement = document.querySelector("#current-degree");
+
   degreeElement.innerHTML = Math.round(celsiusTemp);
 }
 
