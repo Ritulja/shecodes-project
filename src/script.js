@@ -45,9 +45,6 @@ function currentDay(date) {
   let day = days[dayIndex];
   return `${day} ${hours}:${minutes}`;
 }
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = currentDay(currentTime);
 
 function cityDisplay(event) {
   event.preventDefault();
@@ -70,9 +67,15 @@ function displayFahrenheitTemp(event) {
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 let celsiusTemp = null;
-
-let citySearchForm = document.querySelector("#city-search-form");
-citySearchForm.addEventListener("submit", cityDisplay);
+function searchLocation(position) {
+  let apiKey = "2881e3d61ec2ba64d89fe66a778a8135";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+function getCurrentLocation(event) {
+  event.preventDefault;
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
 
 function displayCelsiusTemp(event) {
   event.preventDefault;
@@ -82,6 +85,15 @@ function displayCelsiusTemp(event) {
 
   degreeElement.innerHTML = Math.round(celsiusTemp);
 }
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = currentDay(currentTime);
+
+let citySearchForm = document.querySelector("#city-search-form");
+citySearchForm.addEventListener("submit", cityDisplay);
+
+let currentLocationButton = document.querySelector("#current-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fah-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
@@ -90,6 +102,3 @@ let celsiusLink = document.querySelector("#cel-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("London");
-
-let currentLocationButton = document.querySelector("#current-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
