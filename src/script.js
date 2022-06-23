@@ -1,8 +1,3 @@
-// function displayCoordinates(coordinates) {
-//   let apiKey = "2881e3d61ec2ba64d89fe66a778a8135";
-//   let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-//   axios.get (apiUrl).then
-// }
 function currentDay(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -26,7 +21,9 @@ function currentDay(date) {
   let day = days[dayIndex];
   return `${day} ${hours}:${minutes}`;
 }
-function displayForecast() {
+
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
@@ -44,7 +41,12 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+function displayCoordinates(coordinates) {
+  let apiKey = "2881e3d61ec2ba64d89fe66a778a8135";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
+  axios.get(apiUrl).then(displayForecast);
+}
 function displayWeatherCondition(response) {
   let cityDisplay = document.querySelector("#city");
   let degreeElement = document.querySelector("#current-degree");
@@ -64,7 +66,7 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  // displayCoordinates(response.data.coord);
+  displayCoordinates(response.data.coord);
 }
 function searchCity(city) {
   let apiKey = "2881e3d61ec2ba64d89fe66a778a8135";
@@ -129,4 +131,3 @@ let celsiusLink = document.querySelector("#cel-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("London");
-displayForecast();
