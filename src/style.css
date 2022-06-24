@@ -7,10 +7,9 @@
   display: block;
   margin: 0 auto;
   margin-top: 20px;
+  border: 5 px;
 }
 .card-body {
-  background: #8ec9f9;
-
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 .main {
@@ -18,12 +17,11 @@
 }
 .main-cloud {
   font-size: 200px;
-  color: white;
 }
 .current-temp {
   font-size: 110px;
   text-align: right;
-  color: white;
+  color: black;
   margin-bottom: 0;
 }
 .active {
@@ -33,29 +31,27 @@
   right: 30px;
 }
 .characteristics {
-  text-align: right;
-  color: white;
+  color: black;
   position: relative;
-  bottom: 0px;
+  right: 26px;
+  text-align: right;
+  bottom: 20px;
   margin-bottom: 0;
-  font-size: 18;
+  font-size: 20px;
 }
 .days {
   text-align: center;
-  color: white;
+  color: black;
   font-size: 20px;
 }
 
-.img {
-  font-size: 40px;
-}
 .codedBy {
-  position: relative;
-  left: 350px;
+  text-align: center;
   font-family: monospace;
 
   font-size: 14px;
   padding-top: 5px;
+  padding-bottom: 10px;
 }
 .current-temp .active {
   color: black;
@@ -66,6 +62,7 @@
 .current-temp .active:hover {
   text-decoration: none;
 }
+
 .weather-forecast-min-temp {
   opacity: 0.7;
 }
@@ -73,12 +70,12 @@
 #enter-city-form {
   padding: 4px 100px 7px 12px;
   border-radius: 4px;
-  border: 1px white solid;
+  border: 1px black solid;
   margin-bottom: 0;
 }
 
 #city {
-  color: white;
+  color: black;
 
   font-size: 50px;
 }
@@ -86,16 +83,16 @@
   background-color: blue;
 }
 #date {
-  color: white;
+  color: black;
   font-size: 18px;
 }
 #current-state {
   text-transform: capitalize;
-  color: white;
-  font-size: 18px;
+  color: Black;
+  font-size: 20px;
 }
 #icon {
-  size: 300 px;
+  size: 500 px;
 }
 
 #fah-link {

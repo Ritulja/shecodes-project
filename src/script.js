@@ -25,7 +25,7 @@ function currentDay(date) {
 function formatDay(formatDate) {
   let date = new Date(formatDate * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
   return days[day];
 }
 
@@ -51,9 +51,7 @@ function displayForecast(response) {
                 <div class="weather-forecast-max-temp">${Math.round(
                   forecastDay.temp.max
                 )}º</div>
-                <div class="weather-forecast-min-temp">${Math.round(
-                  forecastDay.temp.min
-                )}º</div>
+               
               </div>`;
     }
   });
